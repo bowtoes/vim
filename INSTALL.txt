@@ -1,0 +1,6 @@
+To install:
+	cd src
+	make configure
+	make
+	make ... (check, test, what have you)
+	make install
