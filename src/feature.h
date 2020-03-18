@@ -792,6 +792,9 @@
 // #define USR_VIMRC_FILE	"~/foo/.vimrc"
 // #define USR_VIMRC_FILE2	"~/bar/.vimrc"
 // #define USR_VIMRC_FILE3	"$VIM/.vimrc"
+#define USR_VIMRC_FILE	"$HOME/.config/vim/vimrc"
+#define USR_VIMRC_FILE2	"$HOME/.vim/vimrc"
+#define USR_VIMRC_FILE3	"$HOME/.vimrc"
 
 /*
  * VIM_DEFAULTS_FILE	Name of the defaults.vim script file
@@ -809,6 +812,9 @@
  */
 // #define USR_EXRC_FILE	"~/foo/.exrc"
 // #define USR_EXRC_FILE2	"~/bar/.exrc"
+#define USR_EXRC_FILE  "$HOME/.config/vim/exrc"
+#define USR_EXRC_FILE2 "$HOME/.vim/exrc"
+#define USR_EXRC_FILE3 "$HOME/.exrc"
 
 /*
  * USR_GVIMRC_FILE	Name of the user .gvimrc file.
@@ -821,7 +827,7 @@
 /*
  * SYS_VIMRC_FILE	Name of the system-wide .vimrc file.
  */
-// #define SYS_VIMRC_FILE	"/etc/vimrc"
+#define SYS_VIMRC_FILE	"/addtl/etc/vimrc"
 
 /*
  * SYS_GVIMRC_FILE	Name of the system-wide .gvimrc file.

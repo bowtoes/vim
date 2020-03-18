@@ -318,20 +318,20 @@ CClink = $(CC)
 # Change this to your desire and do 'make config' afterwards
 
 # examples you can uncomment:
-#CONF_ARGS1 = --exec-prefix=/usr
+CONF_ARGS1 = --exec-prefix=/addtl
 #CONF_ARGS2 = --with-vim-name=vim8 --with-ex-name=ex8 --with-view-name=view8
-#CONF_ARGS3 = --with-global-runtime=/etc/vim,/usr/share/vim
-#CONF_ARGS4 = --with-local-dir=/usr/share
+CONF_ARGS3 = --with-global-runtime=/etc/vim,/addtl/share/vim
+#CONF_ARGS4 = --with-local-dir=/addtl/share
 #CONF_ARGS5 = --without-local-dir
 
 # Use this one if you distribute a modified version of Vim.
-#CONF_ARGS6 = --with-modified-by="John Doe"
+CONF_ARGS6 = --with-modified-by="BowToes"
 
 # GUI - For creating Vim with GUI (gvim) (B)
 # Uncomment this line when you don't want to get the GUI version, although you
 # have GTK, Motif and/or Athena.  Also use --without-x if you don't want X11
 # at all.
-#CONF_OPT_GUI = --disable-gui
+CONF_OPT_GUI = --disable-gui
 
 # Uncomment one of these lines if you have that GUI but don't want to use it.
 # The automatic check will use another one that can be found.
@@ -379,7 +379,7 @@ CClink = $(CC)
 #CONF_OPT_GUI = --enable-gui=carbon
 
 # Uncomment this line to run an individual test with gvim.
-#GUI_TESTARG = GUI_FLAG=-g 
+#GUI_TESTARG = GUI_FLAG=-g
 
 # DARWIN - detecting Mac OS X
 # Uncomment this line when you want to compile a Unix version of Vim on
@@ -396,7 +396,7 @@ CClink = $(CC)
 # Uncomment the next line to fail if one of the requested language interfaces
 # cannot be configured.  Without this Vim will be build anyway, without
 # the failing interfaces.
-#CONF_OPT_FAIL = --enable-fail-if-missing
+CONF_OPT_FAIL = --enable-fail-if-missing
 
 # LUA
 # Uncomment one of these when you want to include the Lua interface.
@@ -404,7 +404,7 @@ CClink = $(CC)
 # Use --with-luajit if you want to use LuaJIT instead of Lua.
 # Set PATH environment variable to find lua or luajit executable.
 # This requires at least "normal" features, "tiny" and "small" don't work.
-#CONF_OPT_LUA = --enable-luainterp
+CONF_OPT_LUA = --enable-luainterp
 #CONF_OPT_LUA = --enable-luainterp=dynamic
 #CONF_OPT_LUA = --enable-luainterp --with-luajit
 #CONF_OPT_LUA = --enable-luainterp=dynamic --with-luajit
@@ -433,7 +433,7 @@ CClink = $(CC)
 # When you get an error for a missing "perl.exp" file, try creating an empty
 # one: "touch perl.exp".
 # This requires at least "normal" features, "tiny" and "small" don't work.
-#CONF_OPT_PERL = --enable-perlinterp
+CONF_OPT_PERL = --enable-perlinterp
 #CONF_OPT_PERL = --enable-perlinterp=dynamic
 
 # PYTHON
@@ -447,10 +447,10 @@ CClink = $(CC)
 # dlopen(), dlsym(), dlclose(), i.e. pythonX.Y.so must be available
 # However, this may still cause problems, such as "import termios" failing.
 # Build two separate versions of Vim in that case.
-#CONF_OPT_PYTHON = --enable-pythoninterp
+CONF_OPT_PYTHON = --enable-pythoninterp
 #CONF_OPT_PYTHON = --enable-pythoninterp --with-python-command=python2.7
 #CONF_OPT_PYTHON = --enable-pythoninterp=dynamic
-#CONF_OPT_PYTHON3 = --enable-python3interp
+CONF_OPT_PYTHON3 = --enable-python3interp
 #CONF_OPT_PYTHON3 = --enable-python3interp --with-python3-command=python3.6
 #CONF_OPT_PYTHON3 = --enable-python3interp=dynamic
 
@@ -459,7 +459,7 @@ CClink = $(CC)
 # First one for static linking, second one for loading when used.
 # Note: you need the development package (e.g., ruby1.9.1-dev on Ubuntu).
 # This requires at least "normal" features, "tiny" and "small" don't work.
-#CONF_OPT_RUBY = --enable-rubyinterp
+CONF_OPT_RUBY = --enable-rubyinterp
 #CONF_OPT_RUBY = --enable-rubyinterp=dynamic
 #CONF_OPT_RUBY = --enable-rubyinterp --with-ruby-command=ruby1.9.1
 
@@ -506,12 +506,12 @@ CClink = $(CC)
 # XIM - X Input Method.  Special character input support for X11 (Chinese,
 # Japanese, special symbols, etc).  Also needed for dead-key support.
 # When omitted it's automatically enabled for the X-windows GUI.
-#CONF_OPT_INPUT = --enable-xim
+CONF_OPT_INPUT = --enable-xim
 #CONF_OPT_INPUT = --disable-xim
 
 # FONTSET - X fontset support for output of languages with many characters.
 # Uncomment this when you want to output a multibyte language.
-#CONF_OPT_OUTPUT = --enable-fontset
+CONF_OPT_OUTPUT = --enable-fontset
 
 # ACL - Uncomment this when you do not want to include ACL support, even
 # though your system does support it.  E.g., when it's buggy.
@@ -531,7 +531,7 @@ CClink = $(CC)
 # libcanberra - For sound support.  Default is on for big features.
 # Uncomment one of the two to chose otherwise.
 # CONF_OPT_CANBERRA = --enable-canberra
-# CONF_OPT_CANBERRA = --disable-canberra
+CONF_OPT_CANBERRA = --disable-canberra
 
 # FEATURES - For creating Vim with more or less features
 # Uncomment one of these lines when you want to include few to many features.
@@ -1020,11 +1020,11 @@ TOOLS = xxd/xxd$(EXEEXT)
 # executable and a common directory for the other files.
 #
 # Uncomment the next line to install Vim in "/usr/bin"
-#BINDIR   = /usr/bin
+BINDIR   = /addtl/bin
 # Uncomment the next line to install Vim manuals in "/usr/share/man/man1"
-#MANDIR   = /usr/share/man
+MANDIR   = /addtl/share/man
 # Uncomment the next line to install Vim help files in "/usr/share/vim"
-#DATADIR  = /usr/share
+DATADIR  = /addtl/share
 
 ### DESTDIR	root of the installation tree.  This is prepended to the other
 #		directories.  This directory must exist.
@@ -3654,7 +3654,7 @@ install_haiku_extra: $(DEST_BIN)/$(VIMTARGET) objects/os_haiku.rsrc
 # List of g*-links that should be replaced with shell script equivalents.
 # This solves the problem of them from Tracker.
 #
-HAIKU_GLINKS = 	$(DEST_BIN)/$(GVIMTARGET) \
+HAIKU_GLINKS =	$(DEST_BIN)/$(GVIMTARGET) \
 				$(DEST_BIN)/$(GVIEWTARGET) \
 				$(DEST_BIN)/$(GVIMDIFFTARGET) \
 				$(DEST_BIN)/$(RGVIMTARGET) \
